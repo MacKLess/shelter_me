@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory(:cat) do
-    name("Bitsy")
+    name("Henry")
     breed("Maine Coon")
   end
-end 
+end

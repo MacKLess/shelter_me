@@ -1,14 +1,20 @@
 class Api::V1::CatsController < ApplicationController
 
   def index
-    name = params[:name]
     breed = params[:breed]
     if breed
       @cats = Cat.search_breed(breed)
+    # elsif random
+    #   @cats = Cat.random
     else
       @cats = Cat.all
     end
     json_response(@cats)
+  end
+
+  def show
+    @cat = Cat.find(params[:id])
+    json_response(@cat)
   end
 
   def create
@@ -19,7 +25,7 @@ class Api::V1::CatsController < ApplicationController
   def update
     @cat = Cat.find(params[:id])
     if @cat.update!(cat_params)
-      render status: 200, json {
+      render status: 200, json: {
         message: "Your cat has been updated successfully!"
       }
     end
@@ -32,7 +38,7 @@ class Api::V1::CatsController < ApplicationController
         message: "This cat is no longer available for adoption. "
       }
     end
-  end 
+  end
 
 private
   def cat_params
