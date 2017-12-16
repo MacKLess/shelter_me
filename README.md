@@ -38,15 +38,6 @@ To install on your own machine, follow the instructions below:
 * API can handle exceptions
 * API has thorough testing with request specs  
 
-* Additional TODO (pick at least 2)
-  * Token-Based Authentication and Authorization
-  * Serialization
-  * API Versioning
-  * Using Swagger for Documentation
-  * Paginating an API
-  * Batching API calls
-  * Rate Limiting
-
 ## Support and contact details
 
 _Please contact [ldmackrell@gmail.com](mailto:ldmackrell@gmail.com) with questions, comments, or issues._
