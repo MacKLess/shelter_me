@@ -7,7 +7,7 @@ class Seed
   end
 
   def generate_cats
-    25.times do |i|
+    100.times do |i|
       name =
       breed =
       cat = Cat.create!(
