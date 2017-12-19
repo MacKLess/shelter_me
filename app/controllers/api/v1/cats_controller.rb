@@ -4,8 +4,6 @@ class Api::V1::CatsController < ApplicationController
     breed = params[:breed]
     if breed
       @cats = Cat.search_breed(breed)
-    # elsif random
-    #   @cats = Cat.random
     else
       @cats = Cat.all
     end
@@ -14,6 +12,11 @@ class Api::V1::CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    json_response(@cat)
+  end
+
+  def random
+    @cat = Cat.random
     json_response(@cat)
   end
 
