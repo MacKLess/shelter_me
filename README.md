@@ -28,11 +28,11 @@ To install on your own machine, follow the instructions below:
   * Name
   * Breed
 * API can accomodate the following:
-  * GET (all and by id)
-  * POST
-  * PUT
-  * Delete
-* API can provide a random pet  
+  * GET (http://localhost:3000/api/v1/cats)
+  * POST (http://localhost:3000/api/v1/cats)
+  * PUT (http://localhost:3000/api/v1/cats/:id)
+  * DELETE (http://localhost:3000/api/v1/cats/:id)
+* API can provide a random cat: GET (http://localhost:3000/api/v1/cats/random)  
 * API can provide search parameters by specific ```breed```
 * API can support versioning
 * API can handle exceptions
